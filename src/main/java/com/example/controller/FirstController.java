@@ -45,8 +45,8 @@ public class FirstController {
 //	public String getProductList(Model model) {
 //		ArrayList <Product> allProducts = new ArrayList<>();
 //			Arrays.asList(
-//					new Product("Zimulis", "Tas ir zimulis", 9, 1.99f)
-//					new Product("Ziepes", "Tas ir ziepes", 92, 4.5f)
+//					new Product("Zimulis", "Tas ir zimulis", 9, 1.99f),
+//					new Product("Ziepes", "Tas ir ziepes", 92, 4.5f),
 //					new Product("Zeke", "Ta ir zeke", 1, 7.99f));
 //		
 //		return "product-show-many-page";

@@ -21,7 +21,7 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString
-@Table(name = "Producttable")
+@Table(name = "Product_table")
 @Entity
 public class Product {
 	@Setter(value = AccessLevel.NONE)
@@ -48,7 +48,7 @@ public class Product {
 
 	@NotNull
 	@Size(min = 3, max = 500)
-	@Pattern(regexp = "[A-ZĒŪĪĶĻĢŠĀŽČŅa-zēūīķļģšāžčņ]+")
+	@Pattern(regexp = "[A-ZĒŪĪĶĻĢŠĀŽČŅa-zēūīķļģšāžčņ ]+")
 	@Column(name = "Description")
 	private String description;
 
