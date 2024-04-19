@@ -41,20 +41,15 @@ public class FirstController {
 		return "product-show-one-page";
 	}
 	
-	@GetMapping("product/list")
-	public String getProductList(Model model) {
-//		Product product1 = new Product("Zimulis", "Tas ir zimulis", 9, 1.99f);
-//		Product product2 = new Product("Ziepes", "Tas ir ziepes", 92, 4.5f);
-//		Product product3 = new Product("Zeke", "Ta ir zeke", 1, 7.99f);
-		
-		ArrayList <Product> allProducts = new ArrayList<>();
-			Arrays.asList(
-					new Product("Zimulis", "Tas ir zimulis", 9, 1.99f)
-					new Product("Ziepes", "Tas ir ziepes", 92, 4.5f)
-					new Product("Zeke", "Ta ir zeke", 1, 7.99f)
-					);
-		
-		return "product-show-many-page";
-	}
+//	@GetMapping("product/list")
+//	public String getProductList(Model model) {
+//		ArrayList <Product> allProducts = new ArrayList<>();
+//			Arrays.asList(
+//					new Product("Zimulis", "Tas ir zimulis", 9, 1.99f)
+//					new Product("Ziepes", "Tas ir ziepes", 92, 4.5f)
+//					new Product("Zeke", "Ta ir zeke", 1, 7.99f));
+//		
+//		return "product-show-many-page";
+//	}
 
 }
