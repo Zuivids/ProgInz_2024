@@ -37,9 +37,6 @@ public class ProgInzSeminar1Application {
 				// izsaukt caur repo findByID()
 				System.out.println("Get  product by id (1): "+productRepo.findById(1).get());
 				
-				
-				
-		
 				Product productForDeleting = productRepo.findById(1).get();
 				productRepo.delete(productForDeleting);
 				// uztaisit update caur repo

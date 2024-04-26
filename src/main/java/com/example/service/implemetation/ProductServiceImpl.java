@@ -48,27 +48,35 @@ public class ProductServiceImpl implements IProductCRUDService, IProductFilterin
 	}
 
 	@Override
-	public Product retriveById(int id) {
+	public Product retriveById(int id) throws Exception {
+		if(id < 0) throw new Exception("Id should be positive!");
 		
-		
-		
-		return null;
+		if(productRepo.existsById(id)) {
+			return productRepo.findById(id).get();
+		}
+		else {
+			throw new Exception("Product with this id ("+id+")is not in system!");
+		}
 	}
 
 	@Override
-	public ArrayList<Product> retriveAll() {
+	public ArrayList<Product> retriveAll()throws Exception{
+		
+		if(productRepo.count() == 0 ) throw new Exception("Table is empty!");
+	
+		return (ArrayList<Product>) productRepo.findAll();
+		
+		
+	}
+
+	@Override
+	public void updateById(int id, Product product) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void updateById(int id, Product product) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteById(int id) {
+	public void deleteById(int id) throws Exception{
 		// TODO Auto-generated method stub
 		
 	}
