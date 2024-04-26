@@ -4,16 +4,17 @@
 <body>
 
 	<h1>Produkti:</h1>
-	
+
 	<table>
 		<tr th:each="tempP : ${mydata}">
 			<td th:text="${tempP.getTitle()}"></td>
-			<td th:text="${mydata.getPrice()}"></td>
-			<td th:text="${mydata.getDescription()}"></td>
-			<td th:text="${mydata.getQuantity()}"></td>
-			<td th:text="${mydata.toString()}"></td>
+			<td th:text="${tempP.getPrice()}"></td>
+			<td th:text="${tempP.getDescription()}"></td>
+			<td th:text="${tempP.getQuantity()}"></td>
+			<td th:text="${tempP.toString()}"></td>
 			<td></td>
 		</tr>
 	</table>
 </body>
+
 </html>
