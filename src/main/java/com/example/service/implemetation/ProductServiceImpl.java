@@ -71,13 +71,23 @@ public class ProductServiceImpl implements IProductCRUDService, IProductFilterin
 
 	@Override
 	public void updateById(int id, Product product) throws Exception {
-		// TODO Auto-generated method stub
 		
+		Product productForUpdating = retriveById(id);
+		
+		productForUpdating.setTitle(product.getTitle());
+		productForUpdating.setDescription(product.getDescription());
+		productForUpdating.setQuantity(product.getQuantity());
+		productForUpdating.setPrice(product.getPrice());
+		
+		productRepo.save(productForUpdating);
 	}
 
 	@Override
 	public void deleteById(int id) throws Exception{
-		// TODO Auto-generated method stub
+		
+		//if(id < 0) throw new Exception("Id should be positive!");
+		
+		productRepo.deleteById(id);
 		
 	}
 	
