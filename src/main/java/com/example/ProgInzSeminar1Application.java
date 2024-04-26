@@ -25,20 +25,20 @@ public class ProgInzSeminar1Application {
 			@Override
 			public void run(String... args) throws Exception {
 				// TODO izveidot 3 produktus
-				Product p1 = new Product("Zimulis", "Tas ir zimulis", 9, 1.99f);
-				Product p2 = new Product("Ziepes", "Tas ir ziepes", 92, 4.5f);
-				Product p3 = new Product("Zeke", "Ta ir zeke", 1, 7.99f);
+				Product p1 = new Product("Zimulis", "Tas ir zimulis", 1, 1.99f);
+				Product p2 = new Product("Ziepes", "Tas ir ziepes", 2, 4.5f);
+				Product p3 = new Product("Zeke", "Ta ir zeke", 3, 7.99f);
 				//ar save funckiju saglabat repo
 				productRepo.save(p1);
 				productRepo.save(p2);
 				productRepo.save(p3);
 				// izsaukt caur repo count()
-				System.out.println("How many products: "+productRepo.count());
+				//System.out.println("How many products: "+productRepo.count());
 				// izsaukt caur repo findByID()
-				System.out.println("Get  product by id (1): "+productRepo.findById(1).get());
+				//System.out.println("Get  product by id (1): "+productRepo.findById(1).get());
 				
-				Product productForDeleting = productRepo.findById(1).get();
-				productRepo.delete(productForDeleting);
+				//Product productForDeleting = productRepo.findById(1).get();
+				//productRepo.delete(productForDeleting);
 				// uztaisit update caur repo
 				Product productForUpdating = productRepo.findById(2).get();
 				productForUpdating.setPrice(0.99f);
