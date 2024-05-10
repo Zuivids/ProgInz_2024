@@ -2,6 +2,7 @@ package com.example.controller;
 
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -64,6 +65,18 @@ public class ProductFilterController {
 			model.addAttribute("mydata", e.getMessage());
 			return "error-page";
 		}
+	}
+	
+	@GetMapping("/stat/total")
+	public String getProductFilterStatTotal(Model model) {
+		try {
+			float result = filterService.calculateTotalValueOfProducts();
+			model.addAttribute("mydata","Total "+result+ " eur");
+		} catch (Exception e) {
+			model.addAttribute("mydata", e.getMessage());
+			return "error-page";
+		}
+		return "hello-msg-page";
 	}
 	
 }
