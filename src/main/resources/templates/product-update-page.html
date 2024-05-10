@@ -4,7 +4,7 @@
 <body>
 
 	<p>Please insert porduct</p>
-	<form th:action="@{/product/crud/insert}" th:method="post" th:object="${product}">
+	<form th:action="@{/product/crud/update/__${id}__}" th:method="post" th:object="${product}">
 		<table>
 			<tr>
 				<td>Title</td>
@@ -28,7 +28,7 @@
 			</tr>
 		</table>
 
-		<button type="submit">Save </button>
+		<button type="submit">Update</button>
 	</form>
 </body>
 
