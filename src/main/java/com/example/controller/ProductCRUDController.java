@@ -29,6 +29,7 @@ public class ProductCRUDController {
 
 		try {
 			model.addAttribute("mydata", crudService.retriveAll());
+			model.addAttribute("msg","Products shown from JAVA");
 			return "product-show-many-page";
 		} catch (Exception e) {
 			model.addAttribute("mydata", e.getMessage());
